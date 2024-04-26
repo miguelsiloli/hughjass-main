@@ -8,7 +8,8 @@
             href: "https://github.com/miguelsiloli/vinted-pipeline-container",
             href_dashboard: "",
             github_href: "https://github.com/miguelsiloli/vinted-pipeline-container",
-            description: ""
+            description: "",
+            url: "images/prefect.png"
         },
         {
             name: "Vinted Analytics",
@@ -16,7 +17,8 @@
             href: "http://16.171.182.134:8502/",
             href_dashboard: "http://16.171.182.134:8502/",
             github_href: "https://github.com/miguelsiloli/vinted-streamlit-container",
-            description: ""
+            description: "",
+            url: "images/analytics.png"
         },
         {
             name: "Browser Game API",
@@ -24,7 +26,8 @@
             href: "https://github.com/miguelsiloli/tw_bot",
             href_dashboard: "",
             github_href: "https://github.com/miguelsiloli/tw_bot",
-            description: ""
+            description: "",
+            url: "images/tribalwars.png"
         },
         {
             name: "Forecasting Tool",
@@ -32,7 +35,8 @@
             href: "https://cpbs-tsa-forecast.streamlit.app/",
             href_dashboard: "https://cpbs-tsa-forecast.streamlit.app",
             github_href: "https://github.com/miguelsiloli/CPBS-TSA-Forecast",
-            description: ""
+            description: "",
+            url: "images/forecasting.png"
         }
     ];
 
@@ -42,17 +46,26 @@
             name: "An avid sports guy",
             description:
                 "My journey in football commenced at the age of five, ignited by my passion for the sport. By the time I reached sixteen, I had the privilege of competing in the national junior championship, marking a pivotal moment in my life. At seventeen I was called to play in the AF Braga district team in inter-regionals play-off and made a short debut in the University of Minho futsal team at 17. After an injury, I decided to give up on the sport but the competitiveness and friendships still remain to this day as an attestement of time!",
-        },
+            image: ""
+            },
         {
             name: "A problem solver",
             description:
                 "I am a problem solver often driven by inner curiosity and creativity to seek out-of-the-box solutions to all sorts of problems. Some of my standout skills of engineering are: critical thinking, passion for learning and ability to find out of the box solutions.",
-        },
+            image: ""
+            },
         {
             name: "A genuine friend",
             description:
                 "Being genuine is key and it's a non negotiable paramount value of mine. I believe in transparency, truthfulness and effective communication. It is a very polarizing trait as it does help me establish deep relationships, but simultaneously it can make me unlikeable for some.",
-        },
+            image: ""
+            },
+        {
+            name: "An adaptable coworker",
+            description:
+                "I am very fluid to fit in organization, both at an interpersonal level and project level. I find this ability of navigate with grace and contribute with meaning a valuable skill in an increasingly changing landscape. Moreover my willingness to learn and take on new responsibilities as well as my interpersonal skills allow me to strive for success.",
+            image: ""
+            }
     ];
 </script>
 
@@ -67,7 +80,7 @@
             <h2 class="font-semibold text-3xl sm:text-5xl md:text-6xl">
                 Miguel Silva
                 <br />
-                <span>Data Analyst</span>
+                <span class="mt-0">Data Analyst</span>
             </h2>
             <p class="text-base sm:text-lg md:text-xl">
                 My stack includes <span class="poppins text-blue-200">Data Engineering</span> (Airflow, Prefect, Dbt), <span class="poppins text-blue-200">Data Visualization</span> (PowerBI, Flask, Plotly), <span class="poppins text-blue-200">Data Science</span> (Sklearn, Statsmodels, LightGBM)
@@ -157,22 +170,29 @@
                 Who am I
             </h3>
         </div>
-        <div class="flex flex-col gap-20 w-full mx-auto max-w-[800px]">
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-20 w-full mx-auto">
             {#each benefits as benefit, index}
-                <div class="flex gap-6 sm:gap-8">
-                    <p
-                        class="poppins text-4xl sm:text-5xl md:text-6xl text-blue-500 font-semibold"
-                    >
-                        0{index + 1}
-                    </p>
+                <div class="flex gap-6 sm:gap-8 justify-between">
                     <div class="flex flex-col gap-6 sm:gap-8">
                         <h3 class="text-2xl sm:text-3xl md:text-5xl">
                             {benefit.name}
-                        </h3>
-                        <p>{benefit.description}</p>
+                        </h3>                        
+                        <div class="grid grid-cols-3 gap-4">
+                            <div class="col-span-2">
+                                <p>{benefit.description}</p>
+                            </div>
+                            
+                            <!-- Image column -->
+                            <div class="col-span-1">
+                                <!-- Place your image here -->
+                                <img src={benefit.image} class="w-full rounded-full" />
+                            </div>
+                        </div>
+                        
                     </div>
                 </div>
             {/each}
         </div>
+             
     </section>
 </main>
