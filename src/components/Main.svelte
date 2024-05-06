@@ -7,6 +7,7 @@
             icon: "fa-solid fa-cart-shopping",
             href: "https://github.com/miguelsiloli/vinted-pipeline-container",
             href_dashboard: "",
+            href_notebooks: "https://miguelsilva-nb.netlify.app/01_vinted_data_engineering/00_intro",
             github_href: "https://github.com/miguelsiloli/vinted-pipeline-container",
             description: "",
             url: "images/prefect.png"
@@ -16,6 +17,7 @@
             icon: "fa-solid fa-desktop",
             href: "http://16.171.182.134:8502/",
             href_dashboard: "http://16.171.182.134:8502/",
+            href_notebooks: "https://miguelsilva-nb.netlify.app/03_vinted_data_science/01_price_prediction",
             github_href: "https://github.com/miguelsiloli/vinted-streamlit-container",
             description: "",
             url: "images/analytics.png"
@@ -25,6 +27,7 @@
             icon: "fa-solid fa-gamepad",
             href: "https://github.com/miguelsiloli/tw_bot",
             href_dashboard: "",
+            href_notebooks: "",
             github_href: "https://github.com/miguelsiloli/tw_bot",
             description: "",
             url: "images/tribalwars.png"
@@ -34,6 +37,7 @@
             icon: "fa-solid fa-line-chart",
             href: "https://cpbs-tsa-forecast.streamlit.app/",
             href_dashboard: "https://cpbs-tsa-forecast.streamlit.app",
+            href_notebooks: "",
             github_href: "https://github.com/miguelsiloli/CPBS-TSA-Forecast",
             description: "",
             url: "images/forecasting.png"

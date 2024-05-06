@@ -17,13 +17,13 @@
         {step.name}
     </h3>
     <slot />
-    <div class="flex-1 flex justify-betweeen items-end">
+    <div class="flex-1 flex items-end">
         <a
             href={step.href_github}
             target="_blank"
-            class="ml-auto flex items-center gap-2 cursor-pointer hover:text-blue-700 duration-300"
+            class="flex items-center gap-2 cursor-pointer hover:text-blue-700 duration-300"
         >
-            <span class="fa-brands fa-github" style="font-size: 1.3em;"></span>
+            <span class="fa-brands fa-github" style="font-size: 1.5em;"></span>
         </a>
         {#if step.href_dashboard}
         <a
@@ -31,7 +31,16 @@
             target="_blank"
             class="ml-auto flex items-center gap-2 cursor-pointer hover:text-blue-700 duration-300"
         >
-            <span class="fa-solid fa-chart-line" style="font-size: 1.3em;"></span>
+            <span class="fa-solid fa-chart-line" style="font-size: 1.5em;"></span>
+        </a>
+        {/if}
+        {#if step.href_notebooks}
+        <a
+            href={step.href_notebooks}
+            target="_blank"
+            class="ml-auto flex items-center gap-2 cursor-pointer hover:text-blue-700 duration-300"
+        >
+            <span class="fa-solid fa-book" style="font-size: 1.5em;"></span>
         </a>
         {/if}
     </div>
